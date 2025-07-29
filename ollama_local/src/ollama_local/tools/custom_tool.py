@@ -35,8 +35,8 @@ class CustomPDFTool(BaseTool):
                 return f"Error: PDF file not found at path: {pdf_path}"
             
             # Create output directories if they don't exist
-            text_dir = "C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/text_temp"
-            image_dir = "C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/image_temp"
+            text_dir = "C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp"
+            image_dir = "C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/image_temp"
             
             os.makedirs(text_dir, exist_ok=True)
             os.makedirs(image_dir, exist_ok=True)
@@ -92,7 +92,7 @@ class CustomQA(BaseTool):
 
             # Optionally append image-based text if available
             # Change the file path if needed
-            image_text_path = "C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/text_temp/extracted_images_to_text.txt"
+            image_text_path = "C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_images_to_text.txt"
             if os.path.exists(image_text_path):
                 with open(image_text_path, "r", encoding="utf-8") as img_file:
                     image_text = img_file.read()
@@ -119,7 +119,7 @@ class CustomQA(BaseTool):
             response = llm.invoke(prompt)
             answer = response.content if hasattr(response, "content") else str(response)
             
-            with open("C:/Users/dohuu/Desktop/Crew project Test/answer_output.txt", "w", encoding="utf-8") as f:
+            with open("C:/Users/dohuu/Desktop/Ollama_Host/answer_output.txt", "w", encoding="utf-8") as f:
                 f.write(answer)
 
             return answer

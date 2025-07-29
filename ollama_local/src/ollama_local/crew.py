@@ -46,7 +46,7 @@ class Ollama_Local():
     def pdf_extract_task(self) -> Task:
         return Task(
             config=self.tasks_config['pdf_extract_task'], 
-            output_file='C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/text_temp/extracted_text.md',
+            output_file='C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_text.md',
             description=(
                 "Extract text, tables, and images from the PDF file located at: {pdf_path}. "
                 "Use the PDF Text/Table/Image Extractor tool with the exact path provided. "

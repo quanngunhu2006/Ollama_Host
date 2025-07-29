@@ -2,7 +2,7 @@ import cv2
 import pytesseract
 import numpy as np
 
-image_path = 'C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/image_temp/image_page_1_img_1.png'
+#image_path = 'C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/image_temp/image_page_1_img_1.png'
 
 class read_image:
     #Optional: Resize if image is too large for OCR
@@ -59,7 +59,7 @@ class read_image:
         #cv2.destroyAllWindows()
 
         #Store the text
-        with open("C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/text_temp/extracted_images_to_text.txt", "a", encoding="utf-8") as f:
+        with open("C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_images_to_text.txt", "a", encoding="utf-8") as f:
            f.write(f"\n--- Image: {self.image_path} ---\n")
            f.write(extracted_text)
            f.write("\n" + "="*50 + "\n")

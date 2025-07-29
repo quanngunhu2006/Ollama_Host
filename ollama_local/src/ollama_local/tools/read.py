@@ -56,7 +56,7 @@ class PDF_Read:
         return table_store
 
     def store_text(self,text_store,table_store):
-        with open("C:/Users/dohuu/Desktop/Crew project Test/new_project\src/new_project/tools/text_temp/extracted_text.txt", "w", encoding="utf-8") as f:
+        with open("C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_text.txt", "w", encoding="utf-8") as f:
             f.write("\t\t\t=== Extracted Text from PDF ===\n\n")
             f.write("\n".join(text_store))
             f.write("\t\t\t=== Extracted Table from PDF ===\n\n")
@@ -66,7 +66,7 @@ class PDF_Read:
     def image_extract(self):
         """Extracts images from a PDF file and saves them to the specified directory."""
         with pdfplumber.open(self.PDF_PATH) as pdf:
-            folder_path = "C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/image_temp"
+            folder_path = "C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/image_temp"
             for page_number, page in enumerate(pdf.pages, start=1):
                 images = page.images
                 for image_index, image in enumerate(images, start=1):
@@ -80,7 +80,7 @@ class PDF_Read:
     def read_images(self, image_store):
         """Loop through all images in image_store and extract text from each"""
         # Clear the existing file content before writing new extractions
-        with open("C:/Users/dohuu/Desktop/Crew project Test/new_project/src/new_project/tools/text_temp/extracted_images_to_text.txt", "w", encoding="utf-8") as f:
+        with open("C:/Users/dohuu/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_images_to_text.txt", "w", encoding="utf-8") as f:
             f.write("=== Extracted Text from Images ===\n\n")
         
         print(f"Total images to process: {len(image_store)}")
