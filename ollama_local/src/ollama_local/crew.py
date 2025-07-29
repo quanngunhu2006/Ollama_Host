@@ -23,22 +23,6 @@ class Ollama_Local():
 
     agents: List[BaseAgent]
     tasks: List[Task]
-
-    @agent
-    def researcher(self) -> Agent:
-        return Agent(
-            config=self.agents_config['researcher'], 
-            verbose=True
-        )
-
-    @agent
-    def reporting_analyst(self) -> Agent:
-        return Agent(
-            config=self.agents_config['reporting_analyst'], 
-            verbose=True,
-             
-
-        )
     
     @agent
     def pdf_extract_assistant(self) -> Agent:
@@ -57,25 +41,6 @@ class Ollama_Local():
            
         )
 
-    
-    @task
-    def research_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['research_task'], 
-        )
-
-    @task
-    def reporting_task(self) -> Task:
-        return Task(
-            config=self.tasks_config['reporting_task'], 
-            output_file='report.md',
-            description="Read the PDF file using the provided PDFSearchTool."
-            "Search for details only on the technical skill. "
-            "Then generate a well-structured report based on those findings. "
-            "Do not hallucinate or guess. Use only content found in the PDF."
-            "If any category is not found, do not include it in the report.",
-            
-        )
     
     @task
     def pdf_extract_task(self) -> Task:
@@ -106,18 +71,6 @@ class Ollama_Local():
             agent=self.qa_assistant()
         )
 
-
-    @crew
-    def crew_research_report(self) -> Crew:
-        """Creates the AiProject crew"""
-
-        return Crew(
-            agents=self.agents, 
-            tasks=self.tasks, 
-            process=Process.sequential,
-            verbose=True,
-            embedder={"provider":"[anthropic]"},
-        )
     
     @crew
     def crew_pdf_extract(self) -> Crew:

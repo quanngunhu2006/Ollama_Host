@@ -40,7 +40,7 @@ def train():
         'current_year': str(datetime.now().year)
     }
     try:
-        OllamaLocal().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
+        Ollama_Local().crew().train(n_iterations=int(sys.argv[1]), filename=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while training the crew: {e}")
@@ -50,7 +50,7 @@ def replay():
     Replay the crew execution from a specific task.
     """
     try:
-        OllamaLocal().crew().replay(task_id=sys.argv[1])
+        Ollama_Local().crew().replay(task_id=sys.argv[1])
 
     except Exception as e:
         raise Exception(f"An error occurred while replaying the crew: {e}")
@@ -65,7 +65,7 @@ def test():
     }
     
     try:
-        OllamaLocal().crew().test(n_iterations=int(sys.argv[1]), eval_llm=sys.argv[2], inputs=inputs)
+        Ollama_Local().crew().test(n_iterations=int(sys.argv[1]), eval_llm=sys.argv[2], inputs=inputs)
 
     except Exception as e:
         raise Exception(f"An error occurred while testing the crew: {e}")
