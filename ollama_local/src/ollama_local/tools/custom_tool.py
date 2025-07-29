@@ -8,6 +8,7 @@ from langchain_anthropic import AnthropicLLM
 from langchain_anthropic import ChatAnthropic
 from dotenv import load_dotenv
 from crewai import LLM
+from langchain_openai import ChatOpenAI
 
 
 
@@ -103,16 +104,21 @@ class CustomQA(BaseTool):
                 f"Please answer this question based on the content: {question}"
             )
 
-            llm = ChatAnthropic(
-               model="claude-3-haiku-20240307",
-               api_key=os.getenv("ANTHROPIC_API_KEY")
-            )
+            # llm = ChatAnthropic(
+            #    model="claude-3-haiku-20240307",
+            #    api_key=os.getenv("ANTHROPIC_API_KEY")
+            # )
             
+            llm = ChatOllama(
+                model = "qwen2.5:7b",
+                #api_key = os.getenv("API_BASE"),
+                base_url = os.getenv("API_BASE")
+            )
 
 
             response = llm.invoke(prompt)
             answer = response.content if hasattr(response, "content") else str(response)
-            answer = str(response)
+            
             with open("C:/Users/dohuu/Desktop/Crew project Test/answer_output.txt", "w", encoding="utf-8") as f:
                 f.write(answer)
 
