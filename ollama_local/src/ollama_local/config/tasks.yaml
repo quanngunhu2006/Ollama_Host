@@ -1,0 +1,38 @@
+research_task:
+  description: >
+    Hãy nghiên cứu về {topic}
+    Hãy cố gắng tìm những chủ đề với thông tin mới nhất trong năm {current_year}.
+  expected_output: >
+    Đưa cho tôi ít nhất 10 lời khuyên hoặc thông tin hữu ích về {topic} bằng Tiếng Việt.
+  agent: researcher
+
+reporting_task:
+  description: >
+    Review the context you got and expand each topic into a full section for a report.
+    Make sure the report is detailed and contains any and all relevant information.
+    You can handle especially complex topics using Vietnamese if needed.
+    The report should be comprehensive and well-structured.
+  expected_output: >
+    A fully fledged report with the main topics, each with a full section of information.
+    Formatted as markdown without '```'
+  agent: reporting_analyst
+
+
+pdf_extract_task:
+  description: >
+    Extract text, tables, and images from the provided PDF file.
+    Use pdfplumber for text and table extraction, and pytesseract for OCR on images.
+    Ensure all extracted information is saved in the specified directories.
+  expected_output: >
+    Text extracted from the PDF file saved in 'text_temp'.
+    Tables extracted and saved in 'table_temp'.
+    Images extracted and saved in 'image_temp'.
+  agent: pdf_extract_assistant
+
+
+qa_task:
+  description: >
+    Answering human input or human question about anything including the extracted PDF txt file 
+  expected_output: >
+    Answering human on terminal using any language that human is asking
+  agent: qa_assistant

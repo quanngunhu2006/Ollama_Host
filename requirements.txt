@@ -1,0 +1,18 @@
+crewai
+dotenv
+anthropic
+PyPDF2
+langchain_anthropic
+langchain
+langchain-ollama
+pytesseract
+pydantic
+langchain_community
+gradio 
+panda
+openpyxl
+opencv-python
+langchain_openai
+
+#"uv tool install crewai" if crewai does not install correctly
+
