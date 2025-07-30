@@ -69,7 +69,7 @@ def run_sec(pdf_path: str, question: str):
             with open(result_file, "r", encoding="utf-8") as f:
                 return f.read()
         else:
-            return "⚠️ Task completed but no answer found."
+            return "Task completed but no answer found."
     except Exception as e:
         raise Exception(f"An error occurred while running the crew: {e}")
 
