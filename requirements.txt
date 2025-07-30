@@ -14,5 +14,7 @@ openpyxl
 opencv-python
 langchain_openai
 
+
+#Download uv using this :  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 #"uv tool install crewai" if crewai does not install correctly
 

@@ -37,7 +37,7 @@ class read_image:
 
         #Extract text in Vietnamese
         extracted_text = pytesseract.image_to_string(gray, lang='vie', config=custom_config)
-        print("📝 Extracted Text:\n")
+        print("Extracted Text:\n")
         print(extracted_text)
 
         #Get character bounding boxes
