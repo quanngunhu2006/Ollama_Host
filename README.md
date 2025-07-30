@@ -34,5 +34,7 @@ How to Use
 - My laptop can not handle big ollama model since it is only 16GB, therefore need to be test on a bigger model with a better spec
 - JSON file extract for excel upload might need some tweak on the prompt that you give to the AI, since it has to match the name of the JSON file in order for it to upload to the Excel
 - Gradio (the website you see when run main.py inside run_w_email) is just for demo, it does not automatically run your gmail checking. Instead, if you want to run it automatically you have to run it on the terminal which is the code I put as a comment you see down below the demo.launch() line
+- Right now it is also only detect new email that has the title "PROCESS DOCUMENT" can be change to another if needed
+- Might need to change connection to Microsoft Office 365 API instead of gmail depend on user preference
 - Messy code :))
 
