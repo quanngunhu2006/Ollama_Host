@@ -6,6 +6,9 @@ How to Use
 - Deactivate venv command: deactivate
 - This is just a temp venv for now
 
+
+
+
 2. Set up the env
 - env file should include these:
     + MODE=ollama/qwen2.5:7b or other ollama model you want            
@@ -14,10 +17,17 @@ How to Use
     + EMAIL_PASSWORD (Not the email password but the the security key that is for the 2-Step verification one)
     + FILE_TO_EXTRACT (Something like C:/Users/your_user/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_images_to_text.txt)
 
+
+
+
 3. How to run
+- Change the file path that is being hardcode to your file path
 - Cd into run_w_email and run the main.py in there
 - If you want to just run the crew then just use crewai run but change the argument or remove it
 - When you run the first time it will automatically create another venv inside the ollam_local folder, deactivate your current venv and use that one. It will be the one you will need to use later on
+
+
+
 
 4. Some error or work need to be fix:
 - Still need to fix the file path since it is hardcode right now, have to change it to dynamically so that multiple user can use
