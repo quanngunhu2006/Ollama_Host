@@ -9,7 +9,7 @@
 
 
 
-## 2. Set up the env
+## 2. Set up the env and package
 - env file should include these:
     + `MODE=ollama/qwen2.5:7b` or other ollama model you want            
     + `API_BASE`     default can be `http://localhost:11434`
@@ -18,8 +18,8 @@
     + `FILE_TO_EXTRACT` (Something like C:/Users/your_user/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_images_to_text.txt)
 
 - You can try to change Email address and Email password to outlook address and outlook password (the security key one). I have not try it yet, but it might be able to work just fine with STMP and IMAP like email, so you can try to tweak that env a bit.
-
-
+- Download all of the tools from requirements.txt file
+- Download pytesseract for image scan from this git https://github.com/tesseract-ocr/tesseract
 
 
 ## 3. How to run
@@ -55,7 +55,7 @@
 - Lệnh dừng venv: `deactivate`
 - Đây chỉ là một venv tạm thời
 
-## 2. Thiết lập env
+## 2. Thiết lập env và các công cụ khác
 - Tệp env nên bao gồm các mục sau:
 + `MODE=ollama/qwen2.5:7b` hoặc mô hình ollama khác mà người dùng muốn
 + `API_BASE` mặc định sẽ là `http://localhost:11434`
@@ -64,6 +64,8 @@
 + `FILE_TO_EXTRACT` (Ví dụ: C:/Users/your_user/Desktop/Ollama_Host/ollama_local/src/ollama_local/tools/text_temp/extracted_images_to_text.txt)
 
 - Người dùng có thể thử thay đổi địa chỉ Email và nhập mật khẩu email vào địa chỉ Outlook và mật khẩu Outlook (khóa bảo mật). Tôi chưa thử, nhưng có thể nó hoạt động ok với STMP và IMAP như email, vì vậy người dùng có thể thử điều chỉnh file env.
+- Tải tất cả các công cụ từ requirements.txt file 
+- Tải pytesseract cho việc phân tích và đọc hình ảnh từ https://github.com/tesseract-ocr/tesseract
 
 ## 3. Cách chạy
 - Thay đổi file path đang được mã hóa cứng thành đường dẫn tệp của bạn
