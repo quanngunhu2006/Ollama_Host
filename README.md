@@ -1,4 +1,12 @@
+# Description
+- This program is use for automatically reading new email and download PDF work file 
+- 3 main function:
+    + Download PDF automatically from email/outlook (need change)
+    + Allow user to ask local host AI about the working PDF
+    + Allow user to push the PDF information to the Excel
+
 # How to Use
+
 
 ## 1. Create a venv
 - Command: `python -m venv nameofyourchoice`
